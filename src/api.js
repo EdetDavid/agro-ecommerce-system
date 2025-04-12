@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "http://https://agro-ecommerce-system-backend.onrender.com/api";
+  process.env.REACT_APP_API_URL || "https://agro-ecommerce-system-backend.onrender.com/api";
 
 // --- Create dedicated Axios instance ---
 const apiClient = axios.create({
