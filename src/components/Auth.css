@@ -1,0 +1,377 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+    padding: 20px;
+}
+
+/* Auth Form */
+.auth-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.auth-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Auth Title */
+.auth-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+/* Input Groups */
+.auth-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-input-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Auth Input */
+.auth-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.auth-input.invalid {
+    border-color: #ff4d4d;
+}
+
+.auth-input-error {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* Password Input Group */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    padding: 4px;
+}
+
+/* Auth Roles */
+.auth-roles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-roles-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.auth-role-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-role-checkbox {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Remember Me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.remember-me label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Auth Button */
+.auth-button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.auth-button:active {
+    transform: translateY(0);
+}
+
+.auth-button:disabled {
+    background-color: #A5D6A7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-button .loading-spinner {
+    display: inline-block;
+    margin-right: 8px;
+    animation: spinning 1s infinite linear;
+}
+
+@keyframes spinning {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Auth Toggle Button */
+.auth-toggle-button {
+    margin-top: 16px;
+    background: none;
+    border: none;
+    color: #4CAF50;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.auth-toggle-button:hover {
+    color: #45a049;
+}
+
+/* Auth Divider */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    color: #777;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #DDD;
+}
+
+.auth-divider span {
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/* Auth Error */
+.auth-error {
+    color: #FF4D4D;
+    margin-bottom: 20px;
+    padding: 12px;
+    background-color: rgba(255, 77, 77, 0.1);
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: left;
+    border-left: 4px solid #FF4D4D;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.social-login-button {
+    background: none;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-login-button:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.social-login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 25px 20px;
+    }
+    
+    .auth-title {
+        font-size: 24px;
+    }
+}
+
+
+
+
+/* Style adjustments for farmer checkbox */
+.farmer-role-group {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .auth-role-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative; /* For tooltip positioning */
+  }
+  .auth-role-checkbox {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary); /* Style checkbox color */
+  }
+  .role-tooltip {
+      display: none; /* Hide by default */
+      position: absolute;
+      left: 100%; /* Position next to the label */
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 10px;
+      background-color: var(--dark);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      z-index: 10;
+  }
+  .auth-role-label:hover .role-tooltip {
+      display: block; /* Show on hover */
+  }
+  
+  
+  /* Improved social buttons */
+  .social-login-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 15px;
+      border: 1px solid #DDD;
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+      width: 100%; /* Make buttons fill space */
+      justify-content: center;
+  }
+  .social-login-button svg {
+      font-size: 1.2rem;
+  }
+  .social-login-button.google { color: #DB4437; border-color: #DB4437; }
+  .social-login-button.facebook { color: #4267B2; border-color: #4267B2; }
+  .social-login-button:hover {
+      background-color: #f8f8f8;
+      transform: translateY(-2px);
+  }
+  .social-login {
+    display: flex;
+    flex-direction: column; /* Stack buttons */
+    gap: 10px; /* Adjust gap */
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Input validation style */
+  .auth-input.invalid {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2); /* Red glow */
+  }

@@ -1,0 +1,438 @@
+.profile-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 30px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.profile-title {
+  font-size: 2rem;
+  color: #345734; /* Darker green */
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e8f5e9; /* Light green border */
+  padding-bottom: 0.5rem;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eef7ee;
+  padding-bottom: 15px;
+}
+
+.profile-header-content {
+  display: flex;
+  align-items: center;
+}
+
+/* --- Avatar Styling --- */
+.profile-avatar-wrapper {
+  position: relative;
+  width: 100px; /* Increased size */
+  height: 100px;
+  border-radius: 50%;
+  cursor: default;
+  margin-right: 20px;
+  overflow: hidden;
+  border: 3px solid #e8f5e9; /* Light green border */
+  background-color: #f0f0f0; /* Fallback background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.profile-avatar-wrapper.editable {
+  cursor: pointer;
+}
+
+.profile-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop image nicely */
+}
+
+.profile-avatar-icon {
+  font-size: 4rem; /* Increased icon size */
+  color: #a0a0a0; /* Icon color */
+}
+
+.profile-avatar-edit-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none; /* Don't interfere with click */
+}
+
+.profile-avatar-wrapper.editable:hover .profile-avatar-edit-icon {
+  opacity: 1;
+}
+/* --- End Avatar Styling --- */
+
+.profile-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-user-info h2 {
+  margin: 0 0 4px 0; /* Adjusted spacing */
+  color: #2e7d32; /* Dark green */
+  font-size: 1.6rem; /* Larger username */
+}
+.profile-user-email {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.edit-profile-button {
+  background-color: #4caf50; /* Primary green */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.edit-profile-button:hover {
+  background-color: #3b9d3e; /* Darker green */
+  transform: translateY(-2px);
+}
+
+.edit-profile-button svg {
+  /* Style for potential icon inside */
+  margin-right: 8px;
+}
+
+.save-profile-button {
+  background-color: #2196f3; /* Blue */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex; /* Use inline-flex */
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space icon and text */
+  /* Removed width limits to allow natural sizing */
+}
+
+.save-profile-button:hover {
+  background-color: #0b7dda; /* Darker blue */
+  transform: translateY(-2px);
+}
+
+.profile-form .form-group {
+  margin-bottom: 20px;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.profile-form input[type="tel"],
+.profile-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-form input[type="tel"]:focus,
+.profile-form textarea:focus {
+  border-color: #4caf50; /* Green focus */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.profile-details {
+  margin-top: 1rem;
+}
+
+.profile-details p {
+  margin: 15px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space icon and text */
+  color: #444;
+}
+
+.profile-details p strong {
+  min-width: 80px; /* Adjust as needed */
+  color: #555;
+  font-weight: 600;
+}
+
+.detail-icon {
+  color: #4caf50; /* Green icon */
+  font-size: 1.2rem;
+  flex-shrink: 0; /* Prevent icon shrinking */
+}
+
+/* Removed role checkbox styles as they are not in the form anymore */
+
+.role-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem; /* Smaller badge */
+  font-weight: 500;
+  margin-left: 10px;
+  vertical-align: middle; /* Align better with text */
+}
+
+.role-badge.farmer {
+  background-color: #e8f5e9; /* Light green */
+  color: #2e7d32; /* Dark green */
+}
+
+.role-badge.buyer {
+  background-color: #e3f2fd; /* Light blue */
+  color: #1565c0; /* Dark blue */
+}
+
+.profile-success-message,
+.profile-error {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space icon and text */
+}
+
+.profile-success-message {
+  background-color: #d4edda; /* Bootstrap success light */
+  color: #155724; /* Bootstrap success dark */
+  border: 1px solid #c3e6cb;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-error {
+  background-color: #f8d7da; /* Bootstrap danger light */
+  color: #721c24; /* Bootstrap danger dark */
+  border: 1px solid #f5c6cb;
+}
+
+.profile-success-message svg,
+.profile-error svg {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.profile-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.profile-loading-spinner {
+  /* Style for potential spinner */
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4caf50;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.profile-empty {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: flex-start; /* Align buttons left */
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #555;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.remove-image-button.small {
+  /* Style for remove button */
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  background-color: #ef5350; /* Lighter red */
+}
+.remove-image-button.small:hover {
+  background-color: #e53935; /* Darker red */
+}
+
+.helperText {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .profile-user-info h2 {
+    font-size: 1.4rem;
+  }
+  .form-buttons {
+    flex-direction: column; /* Stack buttons */
+  }
+  .save-profile-button,
+  .cancel-button {
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Container for avatar and its edit buttons */
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center avatar and buttons below it */
+  margin-right: 25px; /* Space between avatar section and user info */
+  flex-shrink: 0;
+}
+
+/* Style for the edit buttons below the avatar and remove duplicated styles */
+.avatar-edit-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px; /* Space between buttons */
+  align-items: center; /* Center buttons */
+  width: 150px; /* Give buttons a consistent width */
+}
+
+.avatar-change-button,
+.avatar-remove-button {
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.avatar-change-button {
+  background-color: #eee; /* Light gray */
+  color: #333;
+  border: 1px solid #ccc;
+}
+.avatar-change-button:hover {
+  background-color: #ddd;
+}
+
+.avatar-remove-button {
+  background-color: #fce8e6; /* Light red */
+  color: #c53929; /* Darker red */
+  border: 1px solid #f7b9b5;
+}
+.avatar-remove-button:hover {
+  background-color: #f8d7da;
+}
+
+/* Adjustments for user info alignment next to avatar section */
+.profile-user-info {
+  /* Removed justify-content: center; */
+  padding-top: 10px; /* Add some top padding to align better */
+}
+
+
+
+
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .profile-header-content {
+    flex-direction: column; /* Stack avatar and info */
+    align-items: center; /* Center items */
+    text-align: center;
+  }
+  .profile-avatar-section {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 15px; /* Add bottom margin */
+  }
+  .profile-user-info {
+    padding-top: 0;
+  }
+}

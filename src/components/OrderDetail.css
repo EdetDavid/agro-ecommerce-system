@@ -1,0 +1,356 @@
+.order-detail-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.order-detail-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.order-detail-not-found {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.order-detail-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.order-detail-section {
+    margin-bottom: 30px;
+}
+
+.order-detail-section h2 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.order-summary-table, .order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-summary-table th, 
+.order-summary-table td,
+.order-items-table th,
+.order-items-table td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.order-summary-table th, 
+.order-items-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-total {
+    font-weight: 600;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .order-detail-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+.order-detail-container {
+    max-width: 1100px; /* Slightly wider */
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.order-detail-title {
+    font-size: 1.8rem; /* Slightly smaller title */
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+}
+.order-id-span {
+    color: var(--primary, #4CAF50);
+    font-weight: normal;
+}
+
+.order-main-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive columns */
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.order-info-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.order-info-header {
+    font-size: 1.15rem;
+    color: var(--primary-dark, #388E3C);
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+/* Grid for info items inside cards */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Default two columns */
+    gap: 15px 20px; /* Row and column gap */
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+.info-icon {
+    color: var(--primary, #4CAF50);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.info-item strong {
+    display: block; /* Label on its own line */
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+}
+.info-item span {
+    word-break: break-word; /* Prevent long text overflow */
+}
+.info-item.full-width {
+    grid-column: 1 / -1; /* Make item span both columns */
+}
+.info-total-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+}
+
+/* Shipping Address specific */
+.shipping-address-text {
+    line-height: 1.6;
+    white-space: pre-wrap; /* Respect line breaks if any */
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+}
+.status-pending { background-color: var(--warning, #FF9800); }
+.status-processing { background-color: var(--info, #2196F3); }
+.status-shipped { background-color: #607d8b; } /* Example */
+.status-delivered { background-color: var(--success, #4CAF50); }
+.status-completed { background-color: var(--success, #4CAF50); }
+.status-cancelled { background-color: var(--danger, #F44336); }
+.status-failed { background-color: var(--danger, #F44336); }
+
+
+/* Items Section */
+.order-detail-section.items-section {
+    grid-column: 1 / -1; /* Ensure it spans full width */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    margin-top: 0; /* Remove extra top margin if stacked */
+}
+.order-detail-section.items-section h2 {
+    margin-bottom: 20px; /* More space after heading */
+}
+
+.items-table-container {
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 600px; /* Prevent excessive wrapping */
+}
+
+.order-items-table th,
+.order-items-table td {
+    padding: 12px 15px; /* Consistent padding */
+    border: 1px solid #e8e8e8;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.order-items-table th {
+    background-color: #f7f7f7;
+    font-weight: 600;
+    color: #333;
+}
+
+.item-product-col { width: 45%; }
+.item-price-col { width: 20%; text-align: right; }
+.item-qty-col { width: 15%; text-align: center; }
+.item-total-col { width: 20%; text-align: right; }
+
+.order-items-table td[data-label] { /* Mobile styles */
+    text-align: right; /* Align value right */
+}
+.order-items-table td[data-label]::before { /* Mobile labels */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.item-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    flex-shrink: 0; /* Prevent image shrinking */
+}
+.item-thumbnail-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.item-name-link {
+    color: var(--primary-dark, #388E3C);
+    text-decoration: none;
+    font-weight: 500;
+}
+.item-name-link:hover {
+    text-decoration: underline;
+}
+
+.no-items-message {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+/* Actions */
+.order-detail-actions {
+    text-align: center;
+    margin-top: 30px; /* Increased margin */
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.back-link {
+  /* Keep previous styles */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--primary, #4CAF50);
+  font-weight: 500;
+  padding: 10px 20px; /* Slightly larger padding */
+  border: 1px solid var(--primary, #4CAF50);
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+.back-link:hover {
+  background-color: var(--primary-light, #C8E6C9);
+  color: var(--primary-dark, #388E3C);
+}
+
+/* Responsive adjustments for tables and layout */
+@media (max-width: 768px) {
+    .order-main-info {
+        grid-template-columns: 1fr; /* Stack info cards */
+    }
+    .info-grid {
+         grid-template-columns: 1fr; /* Stack info items within card */
+    }
+    .info-item.full-width {
+         grid-column: auto; /* Reset span on small screens */
+    }
+
+    /* Mobile Table Styles */
+    .order-items-table thead {
+        display: none; /* Hide table header */
+    }
+    .order-items-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .order-items-table td {
+        display: block;
+        text-align: right; /* Align value right */
+        padding-left: 50%; /* Create space for label */
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+     .order-items-table td:last-child {
+         border-bottom: none;
+     }
+    .order-items-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px; /* Align label left */
+        width: calc(50% - 25px); /* Adjust width */
+        font-weight: bold;
+        text-align: left;
+        color: #333;
+        white-space: nowrap;
+    }
+    /* Adjust specific cell alignment if needed */
+    .order-items-table td[data-label="Product:"] {
+         padding-left: 15px; /* Reset padding for product cell */
+         text-align: left;
+    }
+     .order-items-table td[data-label="Product:"]::before {
+          display: none; /* Hide label for product cell */
+     }
+     .product-cell {
+          gap: 10px;
+          padding: 10px 0; /* Add padding inside product cell */
+     }
+     .item-thumbnail {
+         width: 40px; height: 40px;
+     }
+     .item-thumbnail-placeholder {
+         width: 40px; height: 40px;
+     }
+}
