@@ -88,8 +88,8 @@ const Navbar = () => {
              {/* Brand/Logo */}
              <div className="navbar-brand">
                 <Link to="/" className="navbar-logo" onClick={closeMenu}> {/* Close menu on logo click */}
-                    <img src={logoImage} alt="AgroEcommerce Logo" className="logo-image" />
-                    <span className="logo-text">AgroEcommerce</span>
+                    <img src={logoImage} alt="Farm Fresh Logo" className="logo-image" />
+                    <span className="logo-text">Farm Fresh </span>
                 </Link>
             </div>
 
