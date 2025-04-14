@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section">
-                    <Link to="/" className="footer-logo">AgroEcommerce</Link>
+                    <Link to="/" className="footer-logo">Farm Fresh</Link>
                     <p>Your one-stop shop for fresh, locally sourced agricultural products.</p>
                     <div className="footer-social">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
@@ -45,12 +45,12 @@ const Footer = () => {
                     <h3>Contact Us</h3>
                     <p>123 Farm Road<br />Agricultural Valley<br />Farmville, AG 12345</p>
                     <p>Phone: (123) 456-7890</p>
-                    <p>Email: info@agroecommerce.com</p>
+                    <p>Email: info@farmfresh.com</p>
                 </div>
             </div>
             
             <div className="footer-bottom">
-                <p>&copy; {currentYear} AgroEcommerce. All rights reserved.</p>
+                <p>&copy; {currentYear} Farm Fresh. All rights reserved.</p>
             </div>
         </footer>
     );
